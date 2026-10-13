@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CV Maker & Resume Builder for Android. Create polished resumes with professional templates, edit your CV, and export to PDF or DOCX.">
+  <meta name="theme-color" content="#101a35">
+  <title>CV Maker & Resume Builder | InfiniTech Solution</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#192445;background:#f6f8fe;font-synthesis:none}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}a:focus-visible{outline:3px solid #6a85ff;outline-offset:4px}
+    .shell{width:min(1140px,calc(100% - 40px));margin:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:25px 0}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:16px;font-weight:800;letter-spacing:-.3px}
+    .mark{width:39px;height:39px;display:grid;place-items:center;background:linear-gradient(135deg,#3c57e4,#756bfb);color:#fff;border-radius:12px;font-size:20px;box-shadow:0 8px 20px #3c57e42e}
+    .nav-links{display:flex;gap:24px;align-items:center;font-size:14px;color:#4a5875}
+    .nav-links a{text-decoration:none}.nav-links a:hover{text-decoration:underline}
+    .hero{padding:84px 0 106px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(310px,.9fr);gap:52px;align-items:center}
+    .eyebrow{color:#3854cb;font-size:13px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}
+    h1{font-size:clamp(39px,5.1vw,69px);line-height:1.1;letter-spacing:-2.5px;margin:19px 0 23px}
+    .lead{max-width:560px;font-size:18px;line-height:1.75;color:#56637e}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:33px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:13px;padding:15px 22px;text-decoration:none;font-size:15px;font-weight:750;min-height:48px}
+    .primary{background:#435ce3;color:#fff;box-shadow:0 12px 28px #435ce337}.primary:hover{background:#334bd4}
+    .secondary{background:white;border:1px solid #dce1ef;color:#2a3557}.secondary:hover{background:#eff2fc}
+    .visual{padding:27px;background:linear-gradient(160deg,#e4eaff,#dce4fd 58%,#d1e8f4);border:1px solid #d8e0fa;border-radius:31px;box-shadow:0 22px 55px #6278af24}
+    .sheet{max-width:385px;margin:auto;background:#fff;border-radius:14px;min-height:410px;padding:31px;box-shadow:0 17px 36px #6470a82e}
+    .sheethead{display:flex;align-items:center;gap:15px;border-bottom:1px solid #e7eaf2;padding-bottom:21px}
+    .avatar{width:58px;height:58px;border-radius:15px;background:linear-gradient(145deg,#5172f3,#77c4ed)}
+    .line{height:9px;background:#dbe2f1;border-radius:20px;margin:12px 0}.line.dark{background:#657cec}.line.short{width:48%}.line.medium{width:74%}.line.small{height:7px}
+    .sheetsection{margin-top:26px}.sheettag{font-size:11px;font-weight:800;letter-spacing:1.3px;color:#596aca}
+    .columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.pill{height:20px;border-radius:7px;background:#e5ebfb;margin:10px 0}
+    .section{padding:66px 0}.section h2{text-align:center;font-size:clamp(28px,3.5vw,40px);letter-spacing:-1px;margin:10px 0}.sub{text-align:center;color:#65718a;max-width:620px;margin:12px auto 36px;line-height:1.7}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{background:white;border:1px solid #e2e7f2;border-radius:21px;padding:29px;box-shadow:0 6px 25px #23377009}.feature .emoji{font-size:27px}.feature h3{font-size:18px;margin:15px 0 10px}.feature p{line-height:1.65;font-size:14px;color:#66738d;margin:0}
+    .bottom{background:#152346;color:#eef2ff;border-radius:26px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:25px;margin:23px 0 65px}.bottom h2{margin:0 0 10px;font-size:29px}.bottom p{margin:0;color:#c0c9e4;line-height:1.6}
+    footer{border-top:1px solid #dde3ee;padding:26px 0 35px;color:#68758b;font-size:13px}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}.foot a{color:#4056c4;text-decoration:none}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:49px 0 72px}.visual{max-width:520px;width:100%;margin:auto}.features{grid-template-columns:1fr}.bottom{flex-direction:column;align-items:start}.nav-links{gap:14px}.nav-links a:first-child{display:none}}
+    @media(max-width:450px){.shell{width:min(100% - 28px,1140px)}.brand{font-size:14px}.nav-links{font-size:12px}.hero{gap:26px}h1{letter-spacing:-1.8px}.visual{padding:17px}.sheet{min-height:350px;padding:22px}.section{padding:38px 0}.bottom{padding:28px}}
+  </style>
+</head>
+<body>
+  <header class="shell nav">
+    <a class="brand" href="/" aria-label="CV Maker and Resume Builder home"><span class="mark" aria-hidden="true">▤</span> CV Maker &amp; Resume Builder</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="/resumebuilder-privacy/">Privacy policy</a>
+      <a href="mailto:umairdev600@gmail.com">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="shell hero">
+      <div>
+        <div class="eyebrow">Your career, professionally presented</div>
+        <h1>Make a great first impression with your CV.</h1>
+        <p class="lead">Create and edit professional resumes on Android, choose a layout that fits your experience, and export documents that are ready to share with employers.</p>
+        <div class="actions">
+          <a class="button primary" href="https://play.google.com/store/apps/details?id=com.resumeflow" rel="noopener noreferrer">Get it on Google Play <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="#features">Explore features <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="visual" aria-label="Stylized preview of a professionally formatted resume" role="img">
+        <div class="sheet">
+          <div class="sheethead"><div class="avatar"></div><div style="flex:1"><div class="line dark medium"></div><div class="line short"></div></div></div>
+          <div class="sheetsection"><span class="sheettag">PROFILE</span><div class="line"></div><div class="line medium"></div><div class="line"></div></div>
+          <div class="sheetsection"><span class="sheettag">EXPERIENCE</span><div class="line dark medium small"></div><div class="line"></div><div class="line medium"></div><div class="line dark short small"></div><div class="line"></div></div>
+          <div class="sheetsection"><span class="sheettag">SKILLS</span><div class="columns"><div><div class="pill"></div><div class="pill"></div></div><div><div class="pill"></div><div class="pill"></div></div></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="eyebrow" style="text-align:center">Built for job seekers</div>
+        <h2>Everything you need to build a resume</h2>
+        <p class="sub">A straightforward resume builder for students, fresh graduates, and experienced professionals.</p>
+        <div class="features">
+          <article class="feature"><div class="emoji" aria-hidden="true">✦</div><h3>Professional templates</h3><p>Choose clean, modern resume designs and organize your skills, education, and work experience.</p></article>
+          <article class="feature"><div class="emoji" aria-hidden="true">✎</div><h3>Easy editing</h3><p>Create multiple resume versions, revise your details, and tailor each CV for a job application.</p></article>
+          <article class="feature"><div class="emoji" aria-hidden="true">⇩</div><h3>Export and share</h3><p>Save resumes as PDF or DOCX and share them with recruiters or employers when you're ready.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="shell bottom">
+      <div><h2>Ready to create your CV?</h2><p>Download CV Maker &amp; Resume Builder on Google Play.</p></div>
+      <a class="button primary" href="https://play.google.com/store/apps/details?id=com.resumeflow" rel="noopener noreferrer">Open Google Play ↗</a>
+    </section>
+  </main>
+  <footer><div class="shell foot"><span>© 2026 InfiniTech Solution. All rights reserved.</span><span><a href="/resumebuilder-privacy/">Privacy Policy</a> · <a href="/app-ads.txt">app-ads.txt</a> · <a href="mailto:umairdev600@gmail.com">Support</a></span></div></footer>
+</body>
+</html>
